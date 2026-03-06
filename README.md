@@ -31,7 +31,7 @@ Built from practice, not theory — calibrated against real deals including vLLM
 
 | File | Purpose |
 |------|---------|
-| [`SKILL.md`](SKILL.md) | Full scoring framework — import directly into Claude as a custom skill |
+| [`SKILL.md`](SKILL.md) | Full scoring framework — works with Claude, GPT-4, Gemini, OpenClaw, Manus, or any LLM agent |
 | [`references/scored-examples.md`](references/scored-examples.md) | Calibration anchors: vLLM/Inferact (8.9/10) and Hugging Face (8.35/10) |
 | [`template/evaluation-template.md`](template/evaluation-template.md) | Blank scorecard — fill in and submit |
 
@@ -39,7 +39,7 @@ Built from practice, not theory — calibrated against real deals including vLLM
 
 ## 🚀 How to Use
 
-### Option A — Use with Claude AI (Recommended)
+### Option A — Use with Claude AI
 1. Download `oss-investment-scorecard.skill`
 2. Go to Claude.ai → Settings → Skills → Upload
 3. Ask Claude: *"Evaluate [project name] for open source VC investment"*
@@ -50,6 +50,15 @@ Built from practice, not theory — calibrated against real deals including vLLM
 2. Fill in each dimension with your research
 3. Calculate weighted score
 4. Submit your evaluation (see below)
+
+### Option C — Use with Any LLM Agent
+
+Works with GPT-4, Gemini, OpenClaw, Cursor, Manus, or any agent that accepts a system prompt.
+
+1. Open `SKILL.md` in this repository
+2. Copy everything from line 17 onwards (skip the YAML header between the `---` markers at the top)
+3. Paste into your agent's system prompt or context window
+4. Ask: *"Evaluate [project name] for open source VC investment"*
 
 ---
 
