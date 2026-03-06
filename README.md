@@ -32,7 +32,7 @@ Built from practice, not theory — calibrated against real deals including vLLM
 | File | Purpose |
 |------|---------|
 | [`SKILL.md`](SKILL.md) | Full scoring framework — import directly into Claude as a custom skill |
-| [`references/scored-examples.md`](references/scored-examples.md) | Calibration anchors: vLLM/Inferact (8.9/10) and Hugging Face (8.5/10) |
+| [`references/scored-examples.md`](references/scored-examples.md) | Calibration anchors: vLLM/Inferact (8.9/10) and Hugging Face (8.35/10) |
 | [`template/evaluation-template.md`](template/evaluation-template.md) | Blank scorecard — fill in and submit |
 
 ---
@@ -86,7 +86,7 @@ Or reach Lucy directly:
 | Project | Score | Verdict | Submitted by | Date |
 |---------|-------|---------|--------------|------|
 | vLLM / Inferact | 8.9/10 | 🟢 Strongly Recommend | @lucycxy | 2026-03 |
-| Hugging Face | 8.5/10 | 🟢 Strongly Recommend | @lucycxy | 2026-03 |
+| Hugging Face | 8.35/10 | 🟢 Strongly Recommend | @lucycxy | 2026-03 |
 | *(your project here)* | | | | |
 
 *This table is updated as community submissions are reviewed. [Submit yours →](../../issues/new?template=submit-evaluation.md)*
