@@ -95,9 +95,9 @@ Or reach Lucy directly:
 ```mermaid
 xychart-beta
     title "OSS Investment Scores — All Evaluated Projects"
-    x-axis ["vLLM/Inferact", "HuggingFace", "LMCache", "AReaL", "agentscope", "hermes-agent", "deer-flow", "WFGY"]
+    x-axis ["vLLM", "HuggingFace", "Unsloth", "LMCache", "Hindsight", "DeepAgents", "AReaL", "agentscope", "TradingAgents", "hermes-agent", "deer-flow", "WFGY", "MiroFish"]
     y-axis "Weighted Score" 0 --> 10
-    bar [8.9, 8.5, 7.78, 7.23, 6.73, 6.30, 6.15, 5.8]
+    bar [8.9, 8.5, 8.10, 7.78, 7.55, 7.45, 7.23, 6.73, 6.35, 6.30, 6.15, 5.8, 5.54]
 ```
 
 ```mermaid
@@ -111,25 +111,37 @@ quadrantChart
     quadrant-4 Corp Asset
     vLLM/Inferact: [0.90, 0.92]
     HuggingFace: [0.85, 0.88]
+    Unsloth: [0.88, 0.85]
     LMCache: [0.82, 0.82]
+    Hindsight: [0.80, 0.78]
+    DeepAgents: [0.55, 0.76]
     AReaL: [0.65, 0.76]
     agentscope: [0.52, 0.68]
+    TradingAgents: [0.72, 0.62]
     hermes-agent: [0.75, 0.60]
-    WFGY: [0.70, 0.55]
     deer-flow: [0.15, 0.58]
+    WFGY: [0.70, 0.55]
+    MiroFish: [0.60, 0.52]
 ```
 
-| Project | Score | Verdict | Submitted by | Date |
-|---------|-------|---------|--------------|------|
-| vLLM / Inferact | 8.9/10 | 🟢 Strongly Recommend | @lucycxy | 2026-03 |
-| Hugging Face | 8.35/10 | 🟢 Strongly Recommend | @lucycxy | 2026-03 |
-| [WFGY](https://github.com/el09xccxy-stack/oss-investment-scorecard/issues/1) | 5.8/10 | 🟠 Watch | @onestardao | 2026-03 |
-| [LMCache/LMCache](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_lmcache.md) | 7.78/10 | 🟡 Yellow | @lucycxy | 2026-03 |
-| [inclusionAI/AReaL](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_areal.md) | 7.23/10 | 🟡 Yellow | @lucycxy | 2026-03 |
-| [agentscope-ai/agentscope](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_agentscope.md) | 6.73/10 | 🟠 Watch | @lucycxy | 2026-03 |
-| [NousResearch/hermes-agent](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_hermes-agent.md) | 6.30/10 | 🟠 Watch | @lucycxy | 2026-03 |
-| [bytedance/deer-flow](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_deer-flow.md) | 6.15/10 | 🟠 Watch ⚠️ Corp | @lucycxy | 2026-03 |
+| Project | Score | Verdict | Batch | Submitted by | Date |
+|---|---|---|---|---|---|
+| [vLLM / Inferact](references/scored-examples.md) | 8.9/10 | 🟢 Strongly Recommend | Benchmark | @lucycxy | 2026-03 |
+| [Hugging Face](references/scored-examples.md) | 8.5/10 | 🟢 Strongly Recommend | Benchmark | @lucycxy | 2026-03 |
+| [unslothai/unsloth](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_unsloth.md) | 8.10/10 | 🟡 Yellow (Strong) | W13 | @lucycxy | 2026-03 |
+| [LMCache/LMCache](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_lmcache.md) | 7.78/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
+| [vectorize-io/hindsight](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_hindsight.md) | 7.55/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
+| [langchain-ai/deepagents](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_deepagents.md) | 7.45/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
+| [inclusionAI/AReaL](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_areal.md) | 7.23/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
+| [agentscope-ai/agentscope](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_agentscope.md) | 6.73/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
+| [TauricResearch/TradingAgents](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_tradingagents.md) | 6.35/10 | 🟠 Watch | W13 | @lucycxy | 2026-03 |
+| [NousResearch/hermes-agent](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_hermes-agent.md) | 6.30/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
+| [bytedance/deer-flow](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_deer-flow.md) | 6.15/10 | 🟠 Watch ⚠️ Corp | W10 | @lucycxy | 2026-03 |
+| [WFGY](cases/) | 5.8/10 | 🟠 Watch | W10 | @onestardao | 2026-03 |
+| [666ghj/MiroFish](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_mirofish.md) | 5.54/10 | 🟠 Watch | W13 | @lucycxy | 2026-03 |
+| *(your project here)* | | | | | |
 
+*This table is updated as community submissions are reviewed. [Submit yours →](../../issues/new?template=submit-evaluation.md)*
 ---
 
 | *(your project here)* | | | | |

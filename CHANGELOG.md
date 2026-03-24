@@ -30,3 +30,21 @@ Format: `[YYYY-MM] Type — Description — Contributor`
 - **Framework** entries = changes to SKILL.md scoring rules
 - **Case** entries = new project evaluations added to /cases/
 - **Correction** entries = factual fixes to existing case studies with source citations
+
+## W13 (2026-03-23)
+
+### New Evaluations
+- **Unsloth** (8.10 🟡 Yellow Strong) — Fine-tuning infra, 57K stars, 150M downloads
+- **Hindsight** (7.55 🟡 Yellow) — Agent memory layer, $1M ARR / 7-person team
+- **DeepAgents** (7.45 🟡 Yellow) — LangChain coding agent, NVIDIA GTC partnership
+- **TradingAgents** (6.35 🟠 Watch) — Multi-agent financial trading, 18% fork ratio
+- **MiroFish** (5.54 🟠 Watch) — Swarm simulation, GitHub #1 trending, Shanda-backed
+
+### README Updates
+- Evaluated Projects table expanded: 2 → 13 projects (benchmarks + W10 + W13)
+- Added mermaid charts (bar + quadrant) with all evaluated projects
+- Added "Batch" column to distinguish evaluation waves
+
+### Cumulative Stats
+- Total projects evaluated: 13
+- 🟢 Green: 2 | 🟡 Yellow: 6 | 🟠 Watch: 5
