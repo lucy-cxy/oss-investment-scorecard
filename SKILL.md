@@ -183,6 +183,36 @@ Total = (A × 0.25) + (B × 0.20) + (C × 0.20) + (D × 0.20) + (E × 0.15)
 
 ---
 
+
+---
+
+## Optional Module: Star Health & Anti-Fraud Protocol (SHP)
+
+**Usage:** Trigger this module if (a) user explicitly requests "Star Health check", (b) project is in a hyper-hyped AI sector, or (c) Star growth velocity is >20% MoM without corresponding Issue/PR activity.
+
+### SHP Step 1: Data Collection
+Calculate the following ratios from GitHub data:
+1. **Star/Fork Ratio (S/F):** Total Stars ÷ Total Forks.
+2. **Star/Issue Ratio (S/I):** Total Stars ÷ Total Issues (Open + Closed).
+3. **Fork Rate (FR):** Total Forks ÷ Total Stars.
+4. **External Commit % (EC):** Commits by non-core-team ÷ Total Commits.
+
+### SHP Step 2: Signal Evaluation
+| Metric | Healthy | Warning | Critical |
+|:---|:---|:---|:---|
+| **S/F Ratio** | 5x - 10x | 11x - 20x | >20x |
+| **S/I Ratio** | 50x - 100x | 101x - 200x | >200x |
+| **Fork Rate** | 9% - 23% | 5% - 8% | <5% |
+| **EC %** | >20% | 5% - 19% | <5% |
+
+### SHP Step 3: Scoring Adjustment for Dimension A
+If SHP is active, apply the following penalties to the raw score of **Dimension A**:
+- **1 Warning:** -0.5 points.
+- **2 Warnings:** -1.0 points.
+- **1 Critical:** -1.5 points.
+- **2+ Critical:** -2.0 points and flag for "One-Vote Veto" review.
+
+---
 ## Step 4 — Required Output Format
 
 1. **Macro Gate Result:** One sentence per question.
