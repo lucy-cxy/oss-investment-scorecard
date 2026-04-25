@@ -51,6 +51,29 @@ Built from practice, not theory — calibrated against real deals including vLLM
 
 ---
 
+
+---
+
+## 🛡️ Optional Module: Star Health & Anti-Fraud Protocol
+
+In the AI-cycle, GitHub stars have become a highly manipulable vanity metric. To ensure the integrity of **Dimension A (Ecosystem Health)**, analysts may optionally trigger the **Star Health Protocol** to detect "surface-level" popularity vs. real developer utility.
+
+### When to use:
+- Projects in hyper-hyped sectors (e.g., AI Agents, RAG wrappers).
+- Projects with >20% MoM star growth but low issue activity.
+- Pre-due diligence for Seed/Series A rounds.
+
+### Core Health Metrics:
+| Metric | Formula | Healthy Range | Risk Signal |
+|:---|:---|:---|:---|
+| **Star/Fork Ratio** | Stars ÷ Forks | 5x – 10x | >20x (Vanity/Bot risk) |
+| **Star/Issue Ratio** | Stars ÷ Issues | 50x – 100x | >200x (Low engagement) |
+| **Fork Rate** | Forks ÷ Stars | 9% – 23% | <5% (Low conversion) |
+| **Watcher Rate** | Subscribers ÷ Stars | Baseline | Unpolluted signal |
+
+> **Integration Note:** If the Star Health Protocol is active and returns "Weak" signals, the score for Dimension A should be penalized by **1.0 - 2.0 points**, regardless of absolute star count.
+
+---
 ## ❓ Frequently Asked Questions
 
 **Q: What metrics actually matter when evaluating an open source AI project for investment — beyond GitHub stars?**
