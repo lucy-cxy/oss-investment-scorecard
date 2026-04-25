@@ -198,6 +198,7 @@ Or reach Lucy directly:
 | **Unsloth** | **8.10** | `████████████████░░░░` |
 | **LMCache** | **7.78** | `███████████████░░░░░` |
 | **Hindsight** | **7.55** | `███████████████░░░░░` |
+| **Infisical Agent Vault** | **7.50** | `███████████████░░░░░` |
 | **DeepAgents** | **7.45** | `██████████████░░░░░░` |
 | **AReaL** | **7.23** | `██████████████░░░░░░` |
 | **AgentScope** | **6.73** | `█████████████░░░░░░░` |
@@ -233,10 +234,12 @@ quadrantChart
     "12": [0.70, 0.55]
     "13": [0.60, 0.52]
     "14": [0.45, 0.51]
+    "15": [0.78, 0.80]
+    "15": [0.78, 0.80]
 ```
 
 **Legend:**
-1. vLLM | 2. HuggingFace | 3. Unsloth | 4. LMCache | 5. Hindsight | 6. DeepAgents | 7. AReaL | 8. AgentScope | 9. TradingAgents | 10. Hermes | 11. DeerFlow | 12. WFGY | 13. MiroFish | 14. Aryn/Sycamore
+1. vLLM | 2. HuggingFace | 3. Unsloth | 4. LMCache | 5. Hindsight | 6. DeepAgents | 7. AReaL | 8. AgentScope | 9. TradingAgents | 10. Hermes | 11. DeerFlow | 12. WFGY | 13. MiroFish | 14. Aryn/Sycamore | 15. Infisical Agent Vault | 15. Infisical Agent Vault
 
 | Project | Score | Verdict | Batch | Submitted by | Date |
 |---|---|---|---|---|---|
@@ -244,6 +247,8 @@ quadrantChart
 | [Hugging Face](references/scored-examples.md) | 8.5/10 | 🟢 Strongly Recommend | Benchmark | @lucycxy | 2026-03 |
 | [unslothai/unsloth](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_unsloth.md) | 8.10/10 | 🟡 Yellow (Strong) | W13 | @lucycxy | 2026-03 |
 | [LMCache/LMCache](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_lmcache.md) | 7.78/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
+| [Infisical/agent-vault](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-04-25_agent-vault.md) | 7.50/10 | 🟡 Yellow | W17 | @lucycxy | 2026-04 |
+| [Infisical/agent-vault](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-04-25_agent-vault.md) | 7.50/10 | 🟡 Yellow | W17 | @lucycxy | 2026-04 |
 | [vectorize-io/hindsight](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_hindsight.md) | 7.55/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
 | [langchain-ai/deepagents](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_deepagents.md) | 7.45/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
 | [inclusionAI/AReaL](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_areal.md) | 7.23/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
