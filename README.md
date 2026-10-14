@@ -269,12 +269,12 @@ Scores below were produced in **Investor Mode** under v1.1–v1.2. **v1.4 does n
 | **vLLM / Inferact** | **8.90** | `██████████████████░░` |
 | **Hugging Face** | **8.50** | `█████████████████░░░` |
 | **Unsloth** | **8.10** | `████████████████░░░░` |
-| **LMCache** | **7.78** | `███████████████░░░░░` |
+| **LMCache** | **7.13** | `██████████████░░░░░░` |
 | **Hindsight** | **7.55** | `███████████████░░░░░` |
 | **Infisical Agent Vault** | **7.50** | `███████████████░░░░░` |
 | **DeepAgents** | **7.45** | `██████████████░░░░░░` |
-| **AReaL** | **7.23** | `██████████████░░░░░░` |
 | **AgentScope** | **6.73** | `█████████████░░░░░░░` |
+| **AReaL** | **6.58** | `█████████████░░░░░░░` |
 | **TradingAgents** | **6.35** | `████████████░░░░░░░░` |
 | **Hermes Agent** | **6.30** | `████████████░░░░░░░░` |
 | **DeerFlow** | **6.15** | `████████████░░░░░░░░` |
@@ -318,13 +318,13 @@ quadrantChart
 | [vLLM / Inferact](references/scored-examples.md) | 8.9/10 | 🟢 Strongly Recommend | Benchmark | @lucycxy | 2026-03 |
 | [Hugging Face](references/scored-examples.md) | 8.5/10 | 🟢 Strongly Recommend | Benchmark | @lucycxy | 2026-03 |
 | [unslothai/unsloth](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-23_unsloth.md) | 8.10/10 | 🟡 Yellow (Strong) | W13 | @lucycxy | 2026-03 |
-| [LMCache/LMCache](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_lmcache.md) | 7.78/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
+| [LMCache/LMCache](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_lmcache.md) | 7.13/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
 | [vectorize-io/hindsight](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-23_hindsight.md) | 7.55/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
 | [Infisical/agent-vault](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-04-25_agent-vault.md) | 7.50/10 | 🟡 Yellow | W17 | @lucycxy | 2026-04 |
 | [langchain-ai/deepagents](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-23_deepagents.md) | 7.45/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
-| [inclusionAI/AReaL](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_areal.md) | 7.23/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
 | [MimiClaw](https://github.com/lucy-cxy/oss-investment-scorecard/issues/2) | 6.9/10 | 🟠 Watch | W11 | @crispyberry (maintainer self-assessment; reviewer estimate 6.5–6.7) | 2026-03 |
 | [agentscope-ai/agentscope](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_agentscope.md) | 6.73/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
+| [inclusionAI/AReaL](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_areal.md) | 6.58/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
 | [TauricResearch/TradingAgents](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-23_tradingagents.md) | 6.35/10 | 🟠 Watch | W13 | @lucycxy | 2026-03 |
 | [NousResearch/hermes-agent](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_hermes-agent.md) | 6.30/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
 | [bytedance/deer-flow](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_deer-flow.md) | 6.15/10 | 🟠 Watch ⚠️ Corp | W10 | @lucycxy | 2026-03 |

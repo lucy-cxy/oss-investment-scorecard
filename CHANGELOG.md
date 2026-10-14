@@ -26,6 +26,8 @@ v1.4 is a corrective release. Weights, thresholds and dimension definitions are 
 - MimiClaw (community submission, #2) added to the Evaluated Projects table
 **Correction / v2.0 P0**
 - `[2026-10]` Correction — Hugging Face displayed dimension scores recompute to 8.45/10; the public canonical score remains 8.5/10 after one-decimal rounding. Initialized `data/score-outcomes.csv` with recomputed totals, reported case totals, canonical scores, provenance, and outcome fields without inventing missing outcomes — @lucy-cxy
+**Authority resolution / v2.0 P1 follow-up**
+- `[2026-10]` Resolved five W10 README/case conflicts: LMCache and AReaL now use detailed case vectors (canonical 7.13 and 6.58); AgentScope, Hermes Agent and DeerFlow cases now follow the later AgentVC README vectors (canonical unchanged). No v1.4 weights or thresholds changed — @lucy-cxy
 **Deferred to v2.0:** dynamic weights by stage (#4), PMF-direction sub-indicator (#5), scoring the Observation Log, back-testing scores against outcomes.
 ---
 
