@@ -1,30 +1,54 @@
 # OSS Investment Scorecard
-### 开源项目投资评估框架 · AI周期专版
 
-> **A structured, weighted scoring framework for USD-denominated VC funds evaluating open source projects during the AI technology acceleration cycle.**
+### 开源项目投资评估框架 · AI 周期专版
 
-Built from practice, not theory — calibrated against real deals including vLLM/Inferact ($150M @ $800M) and Hugging Face ($235M @ $4.5B).
+> **See your open source project through an investor's eyes — before an investor does.**
+
+> 用投资人的眼光，提前看清你的开源项目。
+
+A structured, weighted framework for evaluating open source projects in the AI cycle. From v1.4 it serves two audiences with the same scoring rules:
+
+- **Project owners**: maintainers whose project already has a product and users but has not raised money. **Owner Mode** gives a diagnosis: where the project stands, what an investor will ask, and what to do in the next 90 days. "Not raising venture capital" can be the right answer, and the report will say so.
+
+- **Investors and analysts**: **Investor Mode** gives a verdict and an IC thesis.
+
+Scores are identical in both modes. Two real deals anchor the scale: vLLM/Inferact ($150M @ $800M) and Hugging Face ($235M @ $4.5B).
 
 ---
 
+## 📢 What's New in v1.4 (October 2026)
+
+- **One rulebook.** v1.2 listed three inconsistent veto lists in the README, SKILL.md and the template. v1.4 keeps **four hard vetoes** and turns everything else into **risk flags**, which are recorded and explained but never disqualify on their own.
+
+- **Owner Mode.** A health check for maintainers: the weakest dimension, three questions an investor will ask, three next actions, a project-context check, copy risk, and path fit.
+
+- **Judgment & Trust Observation Log.** When code is cheap, human judgment, attention and trust are what's scarce. v1.4 records 13 observations, each labeled by who can collect it: a third party, a third party following a coding rule, or only the owner. They do not change the score yet.
+
+- **Star Health fix.** Fork Rate is removed. It is the reciprocal of Star/Fork, so v1.2 counted the same fact twice.
+
+- **Known limitations, written down.** Weights and thresholds are practitioner judgment and have not been back-tested yet. v2.0 will test them against what happened to evaluated projects.
+
+- **No old score changed.** Every project evaluated under v1.1–v1.2 keeps its score and verdict.
+
+👉 **[Full framework (SKILL.md)](SKILL.md)** · **[Changelog](CHANGELOG.md)** · **[Request a health check](#-request-a-health-check-for-project-owners)**
+
 ---
 
-**About the author:** [Lucy Chen](https://linkedin.com/in/lucycxy) is an EIR (Entrepreneur in Residence) at [Zoo Capital](https://zoocap.com), a Singapore-based VC fund with USD $2B+ AUM focused on open-source AI investing. She has 15+ years in product commercialization and capital strategy, with two prior startup exits. This framework was developed from direct evaluation work — not synthesized from secondary sources.
+## 🩺 Request a Health Check (for Project Owners)
 
----
+**[→ Request via GitHub Issue](https://github.com/lucy-cxy/oss-investment-scorecard/issues/new?template=health-check.md)** or email **ossinvestor.2026@gmail.com**
 
+How we handle your project:
 
-## 📢 V1.2 Update: From "Scoring Rubric" to "Diligence Protocol"
+1. **Private first.** The report goes to you before anyone else sees it.
 
-**March 2026 Update:** We have officially released **V1.2** of the framework. This update is a structural leap designed to eliminate bias when evaluating early-stage projects (Seed/Series A) where public data is often scarce.
+2. **Right of reply.** You can correct facts and respond to every point.
 
-**Key Improvements in V1.2:**
-- **Mandatory Fact Sheet:** A 7-item pre-evaluation gate including competitive benchmarking.
-- **Indirect Signal Inference:** Guidelines for using SOC2, billing complexity, and hiring signals to estimate traction when ARR is not public.
-- **Project Age Calibration:** Prioritizing **Velocity** over absolute levels for projects <12 months old.
-- **Narrative Pivot Exemptions:** Distinguishing market-following pivots from failure-driven ones.
+3. **Consent before publishing.** We publish only with your consent, with your response attached.
 
-👉 **[View V1.2 Full Framework (SKILL.md)](SKILL.md)** | **[View V1.2 Release Notes](https://github.com/el09xccxy-stack/oss-investment-scorecard/releases/tag/v1.2)**
+4. **No forwarding.** Nothing you share is passed to investors without your explicit consent.
+
+5. **Conflicts disclosed.** If the maintainer of this framework has a commercial relationship with a project (investment, paid services, sponsorship or employment), it is marked next to the score.
 
 ---
 
@@ -44,7 +68,9 @@ Built from practice, not theory — calibrated against real deals including vLLM
 - 🟠 **5.5–6.9** → Watch / Track (re-evaluate in 6-9 months)
 - 🔴 **< 5.5** → Pass
 
-**One-Vote Vetoes:** 6 conditions that trigger automatic Pass regardless of total score. See [SKILL.md](SKILL.md) for full details.
+**Hard Vetoes (4):** core IP not owned · license conflict blocking commercial use · fabricated traction or benchmarks confirmed by evidence · unresolved major litigation on the core. In Investor Mode any hard veto means Pass; in Owner Mode it is listed as "must fix before any fundraise".
+**Risk Flags:** concentrated contribution, no outside OSS record, single decision-maker, market access / jurisdiction, wrapper (L4), narrative instability, unverified revenue at a high valuation, no global reach. Risk flags are recorded and explained in the dimension scores; they never disqualify on their own. See [SKILL.md](SKILL.md).
+**Thresholds** apply to the Investor Mode verdict. Owner Mode shows the score as a reference point, without the verdict label.
 
 ---
 
@@ -63,15 +89,14 @@ In the AI-cycle, GitHub stars have become a highly manipulable vanity metric. To
 - Projects with >20% MoM star growth but low issue activity.
 - Pre-due diligence for Seed/Series A rounds.
 
-### Core Health Metrics:
-| Metric | Formula | Healthy Range | Risk Signal |
-|:---|:---|:---|:---|
-| **Star/Fork Ratio** | Stars ÷ Forks | 5x – 10x | >20x (Vanity/Bot risk) |
-| **Star/Issue Ratio** | Stars ÷ Issues | 50x – 100x | >200x (Low engagement) |
-| **Fork Rate** | Forks ÷ Stars | 9% – 23% | <5% (Low conversion) |
-| **Watcher Rate** | Subscribers ÷ Stars | Baseline | Unpolluted signal |
-
-> **Integration Note:** If the Star Health Protocol is active and returns "Weak" signals, the score for Dimension A should be penalized by **1.0 - 2.0 points**, regardless of absolute star count.
+### Core Health Metrics (v1.4):
+| Metric | Formula | Healthy | Risk Signal |
+|--------|---------|---------|-------------|
+| **Star/Fork Ratio** | Stars ÷ Forks | ≤10x (below 5x is normal) | >20x (vanity / bot risk) |
+| **Star/Issue Ratio** | Stars ÷ Issues | ≤100x | >200x (low engagement) |
+| **External Commit %** | Non-core commits ÷ Total commits | >20% | <5% |
+> v1.4 removed **Fork Rate** (Forks ÷ Stars): it is the reciprocal of Star/Fork, so counting both scored the same fact twice. Read ratios against projects of the same type: curated lists, skill collections and end-user apps naturally show higher ratios than libraries.
+> **Integration Note:** If the Star Health Protocol returns Warning or Critical signals, Dimension A is penalized by 0.5–2.0 points (see SKILL.md). Two or more Critical signals trigger a fabricated-traction review (hard veto V3); the veto applies only if manipulation is confirmed.
 
 ---
 ## ❓ Frequently Asked Questions
@@ -81,7 +106,7 @@ In the AI-cycle, GitHub stars have become a highly manipulable vanity metric. To
 Stars measure visibility, not investability. The framework weights four higher-signal metrics instead:
 - **PR velocity** (commits per week, time-to-merge) — measures active development health
 - **Production dependents** — how many real projects import this as a dependency
-- **Contributor diversity** — single-maintainer projects fail at scale regardless of star count
+- **Who makes decisions** — a project where one person merges and releases everything carries succession risk, however many stars it has
 - **Revenue quality** — ARR from enterprise contracts outweighs usage-based or donation income
 
 A project with 2,000 stars and 40 production dependents is more investable than one with 40,000 stars and 3 dependents. LLaMA-Factory has 68K stars and scores borderline Pass on this framework.
@@ -90,17 +115,13 @@ A project with 2,000 stars and 40 production dependents is more investable than 
 
 **Q: What are the automatic disqualifiers — red flags that kill a deal regardless of total score?**
 
-Six One-Vote Vetoes trigger an automatic Pass regardless of weighted score:
+v1.4 keeps four **hard vetoes**. In Investor Mode, any of them means Pass regardless of the weighted score:
+1. **Core IP not owned** by the project's entity or founders
+2. **License conflict** that blocks commercial use of the core
+3. **Fabricated traction or benchmarks**, confirmed by evidence
+4. **Unresolved major litigation** or patent claims on the core technology
 
-1. **Core IP not owned by the entity** — contributor IP not properly assigned
-2. **License incompatibility** — copyleft obligations that block commercial use
-3. **Single-maintainer bus factor with no succession plan**
-4. **No path to US market access** — critical for USD-denominated exit
-5. **Active litigation or unresolved patent claims** on foundational technology
-6. **Fabricated benchmarks** — any evidence of manipulated performance claims
-
-A project scoring 8.2/10 on dimensions still receives a Pass if any veto applies.
-
+Earlier versions also vetoed single-maintainer projects, projects without a US market path, and projects with under 5% external contributors. v1.4 turns these into **risk flags**. Many successful commercial open source projects are written almost entirely by one company, a small team with coding agents can now ship what used to take a large one, and non-US routes can work. Risk flags are recorded and explained, but they never disqualify on their own.
 ---
 
 **Q: How does this framework handle projects where ARR or revenue isn't public?**
@@ -133,7 +154,7 @@ Projects like Unsloth (8.10/10) score high despite no disclosed ARR because 150M
 **Q: What's the difference between a "Watch" verdict and a "Pass"?**
 
 - **Watch (5.5–6.9):** Real signals exist but 1–2 critical elements are missing — usually PMF evidence or GTM capability. Re-evaluate in 6–9 months. These are pipeline entries, not rejections.
-- **Pass (<5.5):** Fundamental structural issues — missing moat, no community traction, or a One-Vote Veto applies.
+- **Pass (<5.5):** Fundamental structural issues — missing moat, no community traction, or a hard veto applies.
 
 DeerFlow (6.15, Watch ⚠️Corp) is Watch because ByteDance backing structurally limits exit potential — but the technology is real. WFGY (5.80, Watch) is Watch because PMF is unproven, not because the technical thesis is wrong.
 
@@ -145,72 +166,101 @@ Three gaps this framework fills that standard VC frameworks miss:
 
 1. **Community health as a first-class signal** — 25% weight on ecosystem health reflects that open source distribution is the moat, not a feature.
 2. **Corp flag discipline** — projects backed by Alibaba, ByteDance, or Ant Group are flagged (⚠️Corp) because corporate ownership structurally constrains exit optionality regardless of technology quality.
-3. **Calibrated anchors** — every score is relative to vLLM (8.9/10, $800M valuation) and Hugging Face (8.35/10, $4.5B valuation). Without anchors, scores are opinions.
+3. **Calibrated anchors** — every score is relative to vLLM (8.9/10, $800M valuation) and Hugging Face (8.5/10, $4.5B valuation). Without anchors, scores are opinions.
+
+## ⚠️ Known Limitations
+1. Weights and thresholds are practitioner judgment and have not yet been back-tested against funding or exit outcomes. v2.0 will do that.
+2. Activity metrics (commits, contributors, PR latency, issue close rate) are increasingly shaped by coding agents and maintenance style.
+3. The code-based moat ladder (L1–L4) is weakening as forks and rewrites get cheap.
+4. Both calibration anchors are successful companies; early-stage and negative anchors are still missing.
+---
 
 ## 📁 Files
 
 | File | Purpose |
 |------|---------|
-| [`SKILL.md`](SKILL.md) | **V1.2 Full scoring framework** — works with Claude, GPT-4, Gemini, OpenClaw, Manus, or any LLM agent |
-| [`references/scored-examples.md`](references/scored-examples.md) | Calibration anchors: vLLM/Inferact (8.9/10) and Hugging Face (8.35/10) |
+| [`SKILL.md`](SKILL.md) | **V1.4 full framework**: two modes, hard vetoes and risk flags, Observation Log. Works with Claude, GPT, Gemini, OpenClaw, Manus, or any LLM agent |
+| [`.github/ISSUE_TEMPLATE/health-check.md`](.github/ISSUE_TEMPLATE/health-check.md) | Health check request for project owners |
+| [`references/scored-examples.md`](references/scored-examples.md) | Calibration anchors: vLLM/Inferact (8.9/10) and Hugging Face (8.5/10) |
 | [`template/evaluation-template.md`](template/evaluation-template.md) | Blank scorecard — fill in and submit |
 
 ---
 
 ## 🚀 How to Use
 
-### Option A — Use with Claude AI
-1. Download `oss-investment-scorecard.skill`
-2. Go to Claude.ai → Settings → Skills → Upload
-3. Ask Claude: *"Evaluate [project name] for open source VC investment"*
-4. Claude will apply the full framework automatically
+Pick a mode first:
+
+- **Owner Mode**: you maintain the project and want a health check.
+
+- **Investor Mode**: you are evaluating someone else's project for investment.
+
+### Option A — Use with Claude
+
+1. Add [`SKILL.md`](SKILL.md) to Claude as a custom skill.
+
+2. Ask: *"Health check my project [repo URL] in Owner Mode"* or *"Evaluate [project] for investment in Investor Mode"*.
+
+3. Claude applies the full framework, including the Observation Log.
 
 ### Option B — Manual Evaluation
-1. Open [`template/evaluation-template.md`](template/evaluation-template.md)
-2. Fill in each dimension with your research
-3. Calculate weighted score
-4. Submit your evaluation (see below)
+
+1. Open [`template/evaluation-template.md`](template/evaluation-template.md).
+
+2. Choose a mode and fill in each section with your research.
+
+3. Calculate the weighted total.
+
+4. Project owners: [request a health check](#-request-a-health-check-for-project-owners). Investors and analysts: [submit your evaluation](#-submit-an-evaluation-investors--analysts).
 
 ### Option C — Use with Any LLM Agent
 
-Works with GPT-4, Gemini, OpenClaw, Cursor, Manus, or any agent that accepts a system prompt.
+Works with GPT, Gemini, OpenClaw, Cursor, Manus, or any agent that accepts a system prompt.
 
-1. Open `SKILL.md` in this repository
-2. Copy everything from line 17 onwards (skip the YAML header between the `---` markers at the top)
-3. Paste into your agent's system prompt or context window
-4. Ask: *"Evaluate [project name] for open source VC investment"*
+1. Open `SKILL.md` in this repository.
+
+2. Copy everything below the YAML header (the block between the `---` markers at the top).
+
+3. Paste it into your agent's system prompt or context window.
+
+4. Ask: *"Health check my project [repo URL] in Owner Mode"* or *"Evaluate [project] for investment in Investor Mode"*.
 
 ---
 
-## 📬 Submit Your Evaluation — Connect with Investors & Founders
+## 📬 Submit an Evaluation (Investors & Analysts)
 
-**Why submit?**
+**Project owners:** please use the [Health Check template](https://github.com/lucy-cxy/oss-investment-scorecard/issues/new?template=health-check.md) instead.
 
-This repository is maintained by [Lucy Chen](https://linkedin.com/in/lucycxy), EIR (Entrepreneur in Residence) at Zoo Capital, a Singapore-based VC fund with USD $2B+ AUM, focused on broad open-source project investing.
+When you submit an evaluation in Investor Mode, two things happen:
 
-When you submit an evaluation, two things happen:
+1. **Your evaluation becomes part of the public record**: other investors and analysts can see which projects have been assessed.
 
-1. **Your evaluation becomes part of the public record** — other investors and founders can see which projects have been assessed
-2. **You get optionally connected** — if you're an investor looking for deal flow, or a founder wanting investor feedback, Lucy can introduce relevant parties
+2. **You can optionally be connected**: if you are looking for co-investors or deal-sharing partners, Lucy can introduce relevant parties.
 
 **Who should submit:**
+
 - 🔍 **Investors** who evaluated a project and want deal-sharing partners or co-investors
-- 🏗️ **Founders** who want their project professionally scored and introduced to investors
-- 📊 **Analysts** building open-source investment theses
+
+- 📊 **Analysts** building open source investment theses
 
 ### How to Submit
 
-**[→ Submit via GitHub Issue](../../issues/new?template=submit-evaluation.md)**
+**[→ Submit via GitHub Issue](https://github.com/lucy-cxy/oss-investment-scorecard/issues/new?template=submit-evaluation.md)**
 
 Or reach Lucy directly:  
+
 📧 **ossinvestor.2026@gmail.com**  
+
 💼 LinkedIn: [linkedin.com/in/lucycxy](https://www.linkedin.com/in/lucycxy/)  
+
 📘 Facebook: [facebook.com/lucy.chen.908347](https://www.facebook.com/lucy.chen.908347/)  
+
 🌐 Fund: [zoocap.com](https://zoocap.com)
 
 ---
 
-## 📊 Evaluated Projects (Community Submissions)
+## 📊 Evaluated Projects
+
+Scores below were produced in **Investor Mode** under v1.1–v1.2. **v1.4 does not change any of them.** Rows marked "maintainer self-assessment" were scored by the project's own maintainer and reviewed in the linked issue.
 
 ### Investment Scores Overview (Top Projects)
 
@@ -273,11 +323,12 @@ quadrantChart
 | [Infisical/agent-vault](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-04-25_agent-vault.md) | 7.50/10 | 🟡 Yellow | W17 | @lucycxy | 2026-04 |
 | [langchain-ai/deepagents](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_deepagents.md) | 7.45/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
 | [inclusionAI/AReaL](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_areal.md) | 7.23/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
+| [MimiClaw](https://github.com/lucy-cxy/oss-investment-scorecard/issues/2) | 6.9/10 | 🟠 Watch | W11 | @crispyberry (maintainer self-assessment; reviewer estimate 6.5–6.7) | 2026-03 |
 | [agentscope-ai/agentscope](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_agentscope.md) | 6.73/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
 | [TauricResearch/TradingAgents](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_tradingagents.md) | 6.35/10 | 🟠 Watch | W13 | @lucycxy | 2026-03 |
 | [NousResearch/hermes-agent](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_hermes-agent.md) | 6.30/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
 | [bytedance/deer-flow](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-08_deer-flow.md) | 6.15/10 | 🟠 Watch ⚠️ Corp | W10 | @lucycxy | 2026-03 |
-| [WFGY](cases/) | 5.8/10 | 🟠 Watch | W10 | @onestardao | 2026-03 |
+| [WFGY](https://github.com/lucy-cxy/oss-investment-scorecard/issues/1) | 5.8/10 | 🟠 Watch | W10 | @onestardao (maintainer self-assessment; reviewer estimate 5.5–5.6) | 2026-03 |
 | [666ghj/MiroFish](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/2026-03-23_mirofish.md) | 5.54/10 | 🟠 Watch | W13 | @lucycxy | 2026-03 |
 | [Aryn / Sycamore](https://github.com/el09xccxy-stack/agentvc-index/blob/main/cases/aryn-sycamore-retrograde-W13.md) | 5.13/10 | 🔴 Pass | W13 v1.1 | @lucycxy | 2026-04 |
 | *(your project here)* | | | | | |
@@ -288,9 +339,15 @@ quadrantChart
 
 ## 🤝 Contributing
 
+- **Request a health check:** project owners, open a [Health Check issue](https://github.com/lucy-cxy/oss-investment-scorecard/issues/new?template=health-check.md)
 - **Improve the framework:** Open a PR with proposed changes to SKILL.md
 - **Add a case study:** Submit a scored evaluation via Issue
 - **Translate:** Chinese/English versions both welcome
+
+---
+
+## 👤 About the Maintainer
+[Lucy Chen](https://linkedin.com/in/lucycxy) evaluates open source projects as an EIR (Entrepreneur in Residence) at [Zoo Capital](https://zoocap.com), a Singapore-based venture fund. She has 15+ years in product commercialization and capital strategy and two prior startup exits. The framework comes from her own evaluation work.
 
 ---
 
@@ -300,5 +357,4 @@ MIT — use freely, attribution appreciated.
 
 ---
 
-*Maintained by Lucy Chen · [Zoo Capital](https://zoocap.com) · Last updated: April 2026 (v1.2 Roadmap)*
-
+*Maintained by Lucy Chen · [Zoo Capital](https://zoocap.com) · Last updated: October 2026 (v1.4)*
