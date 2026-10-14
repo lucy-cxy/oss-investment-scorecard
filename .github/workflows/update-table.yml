@@ -1,9 +1,7 @@
 name: Update Evaluated Projects Table
-
 on:
   issues:
     types: [labeled]
-
 jobs:
   update-readme:
     # Only fires when Lucy adds the 'accepted' label to an evaluation issue
@@ -14,10 +12,8 @@ jobs:
     permissions:
       contents: write
       issues: read
-
     steps:
       - uses: actions/checkout@v4
-
       - name: Extract evaluation data from issue
         id: extract
         uses: actions/github-script@v7
@@ -28,13 +24,11 @@ jobs:
             const title = context.payload.issue.title || '';
             const user  = context.payload.issue.user.login;
             const issueUrl = context.payload.issue.html_url;
-
             // Parse title: "[EVAL] Project Name — X.X/10 — Verdict"
             const titleMatch = title.match(/\[EVAL\]\s+(.+?)\s+[—–-]+\s+([\d.]+)\/10\s+[—–-]+\s+(.+)/);
             const project = titleMatch ? titleMatch[1].trim() : 'Unknown';
             const score   = titleMatch ? titleMatch[2].trim() : '?';
             const verdict = titleMatch ? titleMatch[3].trim() : '?';
-
             // Map verdict text to emoji
             const emojiMap = {
               'Strongly Recommend': '🟢',
@@ -45,39 +39,39 @@ jobs:
             const emoji = Object.entries(emojiMap).find(([k]) =>
               verdict.toLowerCase().includes(k.toLowerCase())
             )?.[1] || '';
-
             const date = new Date().toISOString().slice(0, 7); // YYYY-MM
-
             return JSON.stringify({ project, score, verdict: `${emoji} ${verdict}`, user, issueUrl, date });
-
       - name: Append row to README table
         uses: actions/github-script@v7
+        env:
+          RESULT: ${{ steps.extract.outputs.result }}
         with:
           script: |
             const fs   = require('fs');
-            const data = JSON.parse(${{ steps.extract.outputs.result }});
-
+            // Read the extract step's output from an environment variable instead of inserting it into the script.
+            const data = JSON.parse(process.env.RESULT);
+            const clean = (v) => String(v).replace(/\|/g, '/').replace(/[\r\n]+/g, ' ').trim();
             let readme = fs.readFileSync('README.md', 'utf8');
-
             const newRow =
-              `| [${data.project}](${data.issueUrl}) ` +
-              `| ${data.score}/10 ` +
-              `| ${data.verdict} ` +
-              `| @${data.user} ` +
+              `| [${clean(data.project)}](${data.issueUrl}) ` +
+              `| ${clean(data.score)}/10 ` +
+              `| ${clean(data.verdict)} ` +
+              `| Community ` +
+              `| @${clean(data.user)} ` +
               `| ${data.date} |`;
-
-            // Insert before the placeholder row
-            readme = readme.replace(
-              '| *(your project here)* | | | | |',
-              `${newRow}\n| *(your project here)* | | | | |`
-            );
-
+            const placeholder = '| *(your project here)* | | | | | |';
+            if (!readme.includes(placeholder)) {
+              core.setFailed('Placeholder row not found in README.md');
+              return;
+            }
+            readme = readme.replace(placeholder, `${newRow}\n${placeholder}`);
             fs.writeFileSync('README.md', readme);
-
       - name: Commit updated README
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "docs: add evaluation for ${{ github.event.issue.title }}"
+          git commit -m "docs: add evaluation for ${ISSUE_TITLE}"
           git push
