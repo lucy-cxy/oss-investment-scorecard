@@ -48,7 +48,7 @@
 | C. Technical Moat | 20% | 8.5/10 | 1.700 |
 | D. Commercialisation & PMF | 20% | 8.0/10 | 1.600 |
 | E. Exit Path | 15% | 8.0/10 | 1.200 |
-| **Total** | 100% | — | **8.35/10** |
+| **Total** | 100% | — | **8.45/10 raw; 8.5/10 canonical** |
 
 **Verdict: 🟢 Strongly Recommend**
 
@@ -87,4 +87,4 @@ Hugging Face has solved the hardest problem in open-source commercialisation: co
 
 ## Scoring Lesson
 
-This case demonstrates the "Hub-as-Platform" commercialisation model — distinct from both Open Core (gated enterprise features) and Infrastructure embedding (OEM). The community IS the product; monetisation follows from the trust and workflow dependency the community creates. The updated revenue hierarchy exposed a real weakness not visible in the old framework: a significant share of HF's revenue growth came from paid consulting with strategic investors (NVIDIA, Amazon, Microsoft), which is Rank 5 PS — non-scalable. The 8.35 total (down from 8.55 under the old framework) is the correct number: still 🟢 Strongly Recommend, but with a D-dimension flag that the revenue mix needs to shift toward pure product ARR to sustain Series E pricing.
+This case demonstrates the "Hub-as-Platform" commercialisation model — distinct from both Open Core (gated enterprise features) and Infrastructure embedding (OEM). The community IS the product; monetisation follows from the trust and workflow dependency the community creates. The updated revenue hierarchy exposed a real weakness not visible in the old framework: a significant share of HF's revenue growth came from paid consulting with strategic investors (NVIDIA, Amazon, Microsoft), which is Rank 5 PS — non-scalable. The displayed dimension scores recompute to **8.45/10 raw**; the public scorecard keeps **8.5/10 canonical** after one-decimal rounding. It remains 🟢 Strongly Recommend, with a D-dimension flag that the revenue mix needs to shift toward pure product ARR to sustain Series E pricing.

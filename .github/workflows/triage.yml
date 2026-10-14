@@ -4,7 +4,7 @@ on:
   issues:
     types: [opened]
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
 
 jobs:
   # ── Auto-label Issues ──────────────────────────────────────────────
@@ -108,7 +108,7 @@ jobs:
             });
 
             const validPaths = ['cases/', 'SKILL.md', 'README.md',
-                                'references/', 'template/', 'CONTRIBUTING.md',
+                                'references/', 'template/', 'data/', 'CONTRIBUTING.md',
                                 'CHANGELOG.md', 'llms.txt', '.github/'];
             const invalid = files
               .map(f => f.filename)
