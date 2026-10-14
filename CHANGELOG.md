@@ -24,6 +24,8 @@ v1.4 is a corrective release. Weights, thresholds and dimension definitions are 
 - Replaced links to the old GitHub account
 - llms.txt: corrected the claim that weights were derived from evaluated projects
 - MimiClaw (community submission, #2) added to the Evaluated Projects table
+**Correction / v2.0 P0**
+- `[2026-10]` Correction — Hugging Face displayed dimension scores recompute to 8.45/10; the public canonical score remains 8.5/10 after one-decimal rounding. Initialized `data/score-outcomes.csv` with recomputed totals, reported case totals, canonical scores, provenance, and outcome fields without inventing missing outcomes — @lucy-cxy
 **Deferred to v2.0:** dynamic weights by stage (#4), PMF-direction sub-indicator (#5), scoring the Observation Log, back-testing scores against outcomes.
 ---
 
