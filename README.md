@@ -18,17 +18,17 @@ Scores are identical in both modes. Two real deals anchor the scale: vLLM/Infera
 
 ## 📢 What's New in v1.4 (October 2026)
 
-- **One rulebook.** v1.2 listed three inconsistent veto lists in the README, SKILL.md and the template. v1.4 keeps **four hard vetoes** and turns everything else into **risk flags**, which are recorded and explained but never disqualify on their own.
+- **One rulebook.** Earlier releases listed three inconsistent veto lists in the README, SKILL.md and the template. v1.4 keeps **four hard vetoes** and turns everything else into **risk flags**, which are recorded and explained but never disqualify on their own.
 
 - **Owner Mode.** A health check for maintainers: the weakest dimension, three questions an investor will ask, three next actions, a project-context check, copy risk, and path fit.
 
 - **Judgment & Trust Observation Log.** When code is cheap, human judgment, attention and trust are what's scarce. v1.4 records 13 observations, each labeled by who can collect it: a third party, a third party following a coding rule, or only the owner. They do not change the score yet.
 
-- **Star Health fix.** Fork Rate is removed. It is the reciprocal of Star/Fork, so v1.2 counted the same fact twice.
+- **Star Health fix.** Fork Rate is removed. It is the reciprocal of Star/Fork, so earlier releases counted the same fact twice.
 
-- **Known limitations, written down.** Weights and thresholds are practitioner judgment and have not been back-tested yet. v2.0 will test them against what happened to evaluated projects.
+- **Known limitations, written down.** Weights and thresholds are practitioner judgment and have not been back-tested yet. The outcome ledger now records 6- and 12-month windows for later backtesting; the current historical rows are not yet mature for those windows.
 
-- **No old score changed.** Every project evaluated under v1.1–v1.2 keeps its score and verdict.
+- **Historical scores are traceable.** The v1.4 framework release did not re-rate the catalog. A later W10 source-of-record review corrected two public totals — LMCache 7.78 → 7.13 and AReaL 7.23 → 6.58 — while retaining the canonical totals for AgentScope, Hermes Agent and DeerFlow.
 
 👉 **[Full framework (SKILL.md)](SKILL.md)** · **[Changelog](CHANGELOG.md)** · **[Request a health check](#-request-a-health-check-for-project-owners)**
 
@@ -72,14 +72,6 @@ How we handle your project:
 **Risk Flags:** concentrated contribution, no outside OSS record, single decision-maker, market access / jurisdiction, wrapper (L4), narrative instability, unverified revenue at a high valuation, no global reach. Risk flags are recorded and explained in the dimension scores; they never disqualify on their own. See [SKILL.md](SKILL.md).
 **Thresholds** apply to the Investor Mode verdict. Owner Mode shows the score as a reference point, without the verdict label.
 
----
-
-
----
-
-
----
-
 ## 🛡️ Optional Module: Star Health & Anti-Fraud Protocol
 
 In the AI-cycle, GitHub stars have become a highly manipulable vanity metric. To ensure the integrity of **Dimension A (Ecosystem Health)**, analysts may optionally trigger the **Star Health Protocol** to detect "surface-level" popularity vs. real developer utility.
@@ -121,12 +113,12 @@ v1.4 keeps four **hard vetoes**. In Investor Mode, any of them means Pass regard
 3. **Fabricated traction or benchmarks**, confirmed by evidence
 4. **Unresolved major litigation** or patent claims on the core technology
 
-Earlier versions also vetoed single-maintainer projects, projects without a US market path, and projects with under 5% external contributors. v1.4 turns these into **risk flags**. Many successful commercial open source projects are written almost entirely by one company, a small team with coding agents can now ship what used to take a large one, and non-US routes can work. Risk flags are recorded and explained, but they never disqualify on their own.
+Earlier drafts also vetoed single-maintainer projects, projects without a US market path, and projects with under 5% external contributors. v1.4 turns these into **risk flags**. Many successful commercial open source projects are written almost entirely by one company, a small team with coding agents can now ship what used to take a large one, and non-US routes can work. Risk flags are recorded and explained, but they never disqualify on their own.
 ---
 
 **Q: How does this framework handle projects where ARR or revenue isn't public?**
 
-V1.2 introduced indirect signal inference for early-stage projects (Seed/Series A):
+For early-stage projects (Seed/Series A), the framework uses indirect signal inference when direct revenue data is not public:
 
 - **SOC2 Type II certification** → signals enterprise sales motion is underway
 - **Billing complexity in public API docs** → indicates commercial tiers exist
@@ -169,10 +161,11 @@ Three gaps this framework fills that standard VC frameworks miss:
 3. **Calibrated anchors** — every score is relative to vLLM (8.9/10, $800M valuation) and Hugging Face (8.5/10, $4.5B valuation). Without anchors, scores are opinions.
 
 ## ⚠️ Known Limitations
-1. Weights and thresholds are practitioner judgment and have not yet been back-tested against funding or exit outcomes. v2.0 will do that.
+1. Weights and thresholds are practitioner judgment and have not yet been back-tested against funding or exit outcomes. The outcome ledger is being prepared for that future backtest as the 6- and 12-month windows mature.
 2. Activity metrics (commits, contributors, PR latency, issue close rate) are increasingly shaped by coding agents and maintenance style.
 3. The code-based moat ladder (L1–L4) is weakening as forks and rewrites get cheap.
 4. Both calibration anchors are successful companies; early-stage and negative anchors are still missing.
+
 ---
 
 ## 📁 Files
@@ -260,7 +253,7 @@ Or reach Lucy directly:
 
 ## 📊 Evaluated Projects
 
-Scores below were produced in **Investor Mode** under v1.1–v1.2. **v1.4 does not change any of them.** Rows marked "maintainer self-assessment" were scored by the project's own maintainer and reviewed in the linked issue.
+Scores below combine historical **Investor Mode** evaluations under v1.1–v1.2 with the later W10 source-of-record correction. The v1.4 framework release did not re-rate the catalog; the W10 review corrected the LMCache and AReaL public totals and synchronized five case records. Rows marked "maintainer self-assessment" were scored by the project's own maintainer and reviewed in the linked issue.
 
 ### Investment Scores Overview (Top Projects)
 
@@ -269,10 +262,10 @@ Scores below were produced in **Investor Mode** under v1.1–v1.2. **v1.4 does n
 | **vLLM / Inferact** | **8.90** | `██████████████████░░` |
 | **Hugging Face** | **8.50** | `█████████████████░░░` |
 | **Unsloth** | **8.10** | `████████████████░░░░` |
-| **LMCache** | **7.13** | `██████████████░░░░░░` |
 | **Hindsight** | **7.55** | `███████████████░░░░░` |
 | **Infisical Agent Vault** | **7.50** | `███████████████░░░░░` |
 | **DeepAgents** | **7.45** | `██████████████░░░░░░` |
+| **LMCache** | **7.13** | `██████████████░░░░░░` |
 | **AgentScope** | **6.73** | `█████████████░░░░░░░` |
 | **AReaL** | **6.58** | `█████████████░░░░░░░` |
 | **TradingAgents** | **6.35** | `████████████░░░░░░░░` |
@@ -318,10 +311,10 @@ quadrantChart
 | [vLLM / Inferact](references/scored-examples.md) | 8.9/10 | 🟢 Strongly Recommend | Benchmark | @lucycxy | 2026-03 |
 | [Hugging Face](references/scored-examples.md) | 8.5/10 | 🟢 Strongly Recommend | Benchmark | @lucycxy | 2026-03 |
 | [unslothai/unsloth](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-23_unsloth.md) | 8.10/10 | 🟡 Yellow (Strong) | W13 | @lucycxy | 2026-03 |
-| [LMCache/LMCache](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_lmcache.md) | 7.13/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
 | [vectorize-io/hindsight](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-23_hindsight.md) | 7.55/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
 | [Infisical/agent-vault](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-04-25_agent-vault.md) | 7.50/10 | 🟡 Yellow | W17 | @lucycxy | 2026-04 |
 | [langchain-ai/deepagents](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-23_deepagents.md) | 7.45/10 | 🟡 Yellow | W13 | @lucycxy | 2026-03 |
+| [LMCache/LMCache](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_lmcache.md) | 7.13/10 | 🟡 Yellow | W10 | @lucycxy | 2026-03 |
 | [MimiClaw](https://github.com/lucy-cxy/oss-investment-scorecard/issues/2) | 6.9/10 | 🟠 Watch | W11 | @crispyberry (maintainer self-assessment; reviewer estimate 6.5–6.7) | 2026-03 |
 | [agentscope-ai/agentscope](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_agentscope.md) | 6.73/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
 | [inclusionAI/AReaL](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/2026-03-08_areal.md) | 6.58/10 | 🟠 Watch | W10 | @lucycxy | 2026-03 |
@@ -333,7 +326,7 @@ quadrantChart
 | [Aryn / Sycamore](https://github.com/lucy-cxy/agentvc-index/blob/main/cases/aryn-sycamore-retrograde-W13.md) | 5.13/10 | 🔴 Pass | W13 v1.1 | @lucycxy | 2026-04 |
 | *(your project here)* | | | | | |
 
-*This table is updated as community submissions are reviewed. [Submit yours →](../../issues/new?template=submit-evaluation.md)*
+*This table is updated as community submissions are reviewed. [Submit yours →](https://github.com/lucy-cxy/oss-investment-scorecard/issues/new?template=submit-evaluation.md)*
 
 ---
 
