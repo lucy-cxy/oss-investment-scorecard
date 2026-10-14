@@ -31,3 +31,11 @@ A row with different values is a **data-quality finding**, not permission to rew
 ## P0 scope
 
 P0 initializes the ledger from the published README and linked case files. It does not backfill unverified funding, revenue, acquisition, maintenance, or failure outcomes, and it does not re-score any historical project. The next stage should reconcile the flagged rows before any v2.0 weight or PMF rule is tested against outcomes.
+
+## P1 review fields
+
+P1 adds explicit `score_drift_status`, `drift_finding`, and `drift_recommended_action` fields. It also separates `outcome_6m_*` and `outcome_12m_*` fields so a partial window cannot be mistaken for a mature result. `outcome_6m` and `outcome_12m` contain concise evidence summaries; the corresponding `*_evidence_urls` fields preserve the URLs used for the judgment.
+
+The fixed P1 review date is 2026-10-14. A window marked `Window not mature` is intentionally not a negative result. A `Confirmed` outcome may describe maintenance, release, integration, adoption, funding, productization, or acquisition; it does not imply ARR or investment success unless the evidence explicitly supports that claim.
+
+P1 recovered dimension data for WFGY and MimiClaw from their original Issues. WFGY is arithmetic-rounding consistent at 5.77 → 5.8. MimiClaw remains flagged because its disclosed dimensions recompute to 6.775 while the Issue and README show 6.9.
