@@ -39,3 +39,7 @@ P1 adds explicit `score_drift_status`, `drift_finding`, and `drift_recommended_a
 The fixed P1 review date is 2026-10-14. A window marked `Window not mature` is intentionally not a negative result. A `Confirmed` outcome may describe maintenance, release, integration, adoption, funding, productization, or acquisition; it does not imply ARR or investment success unless the evidence explicitly supports that claim.
 
 P1 recovered dimension data for WFGY and MimiClaw from their original Issues. WFGY is arithmetic-rounding consistent at 5.77 → 5.8. MimiClaw remains flagged because its disclosed dimensions recompute to 6.775 while the Issue and README show 6.9.
+
+## Authority-resolution correction
+
+The W10 authority pass resolved five README/case conflicts. LMCache and AReaL use the detailed cases as source of record and their public canonical aggregates are now 7.13 and 6.58. AgentScope, Hermes Agent and DeerFlow use the later AgentVC README W10 vectors; their existing canonical scores 6.73, 6.30 and 6.15 remain unchanged, and the case files are synchronized to those vectors. This is a source-of-record correction, not a v1.4 weight or threshold change.
