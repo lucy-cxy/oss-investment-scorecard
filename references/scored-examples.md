@@ -26,7 +26,7 @@ vLLM was created in 2023 at UC Berkeley's Sky Computing Lab (same lab that produ
 
 **Total: 8.9/10 → 🟢 Strongly Recommend**
 
-**One-Vote Veto Check:** None triggered.
+**Hard Veto Check:** None triggered.
 
 **IC Thesis:** vLLM is the inference equivalent of what Kubernetes was for container orchestration — not one of many options, but the standard that every other player must be compatible with. Inferact monetises this position through managed infrastructure while keeping the upstream open. With Ion Stoica's track record (Spark → Databricks, Ray → Anyscale) and a16z/Lightspeed co-leading, the institutional conviction is already validated. The $800M seed valuation is aggressive on current revenue but appropriate for a project with 2,000+ contributors and Amazon as a production customer. Risk: inference commodity pressure from NVIDIA/cloud giants building competing managed offerings.
 
@@ -62,7 +62,7 @@ Hugging Face started as a chatbot in 2016, found product-market fit in 2018 by o
 
 **Total: 8.5/10 → 🟢 Strongly Recommend**
 
-**One-Vote Veto Check:** None triggered.
+**Hard Veto Check:** None triggered.
 
 **IC Thesis:** Hugging Face has done what most open-source companies fail at: converted a free community into a sustainable enterprise revenue engine without destroying the community in the process. $130M ARR growing at 86% YoY, with Google/Amazon/NVIDIA as both investors and distribution partners, creates a flywheel that is extremely hard to displace. The risk is that cloud providers (who are all investors) vertically integrate model hosting and marginalise the independent hub. But the model diversity and community trust Hugging Face has built is a moat that took 5+ years to accumulate.
 
@@ -78,11 +78,11 @@ Hugging Face started as a chatbot in 2016, found product-market fit in 2018 by o
 | Score | Verdict | Real-World Anchor |
 |-------|---------|------------------|
 | 9.5 | 🟢 Strongly Recommend — Category Standard | vLLM post first paid managed service contract |
-| 8.5 – 9.0 | 🟢 Strongly Recommend | vLLM / Inferact at Seed (8.9) — Infrastructure embedding path clear, zero revenue |
-| 8.0 – 8.4 | 🟢 Strongly Recommend | Hugging Face at Series D (8.35) — strong product ARR, PS revenue mix flag |
+| 8.5 – 9.0 | 🟢 Strongly Recommend | vLLM / Inferact at Seed (8.9) and Hugging Face at Series D (8.5) — strong infrastructure / product ARR anchors |
+| 8.0 – 8.4 | 🟢 Strongly Recommend | Early-stage high-signal project with a clear commercialisation path |
 | 7.0 – 7.9 | 🟡 Recommend with Conditions | Strong project, one structural gap to fix; milestone-linked term sheet |
 | 5.5 – 6.9 | 🟠 Watch / Track | Real assets, premature for investment; re-evaluate in 6-9 months |
-| < 5.5 | 🔴 Pass | Structural veto or multiple critical failures |
+| < 5.5 | 🔴 Pass | Hard veto or multiple critical failures |
 
 **How to use these anchors when scoring new projects:**
 
