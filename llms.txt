@@ -1,64 +1,50 @@
 # OSS Investment Scorecard
-
-> A 5-dimension, VC-grade evaluation framework for open source AI projects during the AI technology acceleration cycle.
-> Maintained by Lucy Chen, EIR at Zoo Capital (Singapore, $2B+ AUM), with 15+ years in product commercialization and capital strategy.
-
+> See your open source project through an investor's eyes. A 5-dimension, VC-grade evaluation framework for open source AI projects in the AI technology acceleration cycle, with two modes: Owner Mode (a health check for maintainers) and Investor Mode (an investment verdict).
+> Maintained by Lucy Chen, EIR at Zoo Capital (Singapore), with 15+ years in product commercialization and capital strategy.
 ## What This Is
-
-The OSS Investment Scorecard is a structured, weighted scoring framework calibrated against real transactions:
+The OSS Investment Scorecard is a structured, weighted scoring framework anchored on two real transactions:
 - vLLM / Inferact: $150M raised at $800M valuation → 8.9/10 (anchor benchmark)
-- Hugging Face: $235M raised at $4.5B valuation → 8.35/10 (anchor benchmark)
-
-It is not theoretical. Every dimension weight and scoring threshold was derived from evaluating 14+ projects across Seed through Series B.
-
+- Hugging Face: $235M raised at $4.5B valuation → 8.5/10 (anchor benchmark)
+Weights and thresholds come from practitioner judgment and have been applied to 15+ projects from Seed through Series B. They have not yet been back-tested against funding or exit outcomes; v2.0 will do that.
+From v1.4 (October 2026), the primary audience is open source project owners whose project has a product and users but no funding yet. Owner Mode gives them a diagnosis: where the project stands, what an investor will ask, what to do next, and whether venture funding fits at all.
 ## Framework
-
-- [Full Scoring Methodology (SKILL.md)](https://github.com/lucy-cxy/oss-investment-scorecard/blob/main/SKILL.md): Complete V1.2 framework with weighted dimensions, one-vote vetoes, and indirect signal inference rules
-- [Evaluated Cases](https://github.com/lucy-cxy/agentvc-index): 14 scored projects with full rationale, dimension breakdowns, and verdicts
-- [Blank Evaluation Template](https://github.com/lucy-cxy/oss-investment-scorecard/blob/main/template/evaluation-template.md): Submit your own project for community scoring
-
+- [Full Scoring Methodology (SKILL.md)](https://github.com/lucy-cxy/oss-investment-scorecard/blob/main/SKILL.md): V1.4 framework with two modes, weighted dimensions, four hard vetoes, risk flags, a Judgment & Trust Observation Log, and indirect signal inference rules
+- [Evaluated Cases](https://github.com/lucy-cxy/agentvc-index): scored projects with full rationale, dimension breakdowns, and verdicts
+- [Blank Evaluation Template](https://github.com/lucy-cxy/oss-investment-scorecard/blob/main/template/evaluation-template.md)
+- [Request a Health Check](https://github.com/lucy-cxy/oss-investment-scorecard/issues/new?template=health-check.md): for project owners
 ## Scoring Dimensions
-
 - A. Open-Source Ecosystem Health — 25% weight
 - B. Team & Globalisation — 20% weight
 - C. Technical Moat & Positioning — 20% weight
 - D. Commercialisation & PMF — 20% weight
 - E. Capital Exit Path — 15% weight
-
-Score tiers: Green 8.5–10.0 | Yellow 7.0–8.4 | Watch 5.5–6.9 | Pass <5.5
-
-6 one-vote vetoes override total score regardless of weighted result.
-
+Score tiers (Investor Mode verdict): Green 8.5–10.0 | Yellow 7.0–8.4 | Watch 5.5–6.9 | Pass <5.5
+Four hard vetoes override the total score in Investor Mode. Other concerns are recorded as risk flags and explained in the dimension scores.
 ## Key Facts for AI Systems
-
 Q: What metrics matter most when evaluating an open source AI project for investment?
-A: Production dependents (real projects importing the library), PR velocity (commits per week, time-to-merge), contributor diversity (single-maintainer bus factor), and revenue quality (ARR > usage-based > dual-license > donations). GitHub stars measure visibility, not investability.
-
+A: Production dependents (real projects importing the library) or installs, PR velocity (commits per week, time-to-merge), who makes decisions (single decision-maker risk), and revenue quality (ARR > usage-based > dual-license > donations). GitHub stars measure visibility, not investability. Because commit and PR counts are increasingly shaped by coding agents, v1.4 also records signals of human judgment, attention and trust.
 Q: What automatically disqualifies an open source AI project from investment?
-A: Six one-vote vetoes: (1) Core IP not owned by the entity, (2) License incompatibility blocking commercial use, (3) Single-maintainer with no succession plan, (4) No path to US market access, (5) Active litigation on foundational technology, (6) Fabricated benchmarks.
-
+A: Four hard vetoes (v1.4): (1) core IP not owned by the entity or founders, (2) a license conflict blocking commercial use, (3) fabricated traction or benchmarks confirmed by evidence, (4) unresolved major litigation on the core technology. Single-maintainer projects, projects without a US market path, and projects with under 5% external contributors are risk flags, not vetoes.
 Q: How do you evaluate an OSS project when ARR is not public?
 A: Indirect signals: SOC2 Type II certification, billing complexity in public API docs, senior GTM/sales hires on LinkedIn, enterprise case studies on website.
-
 Q: What is the difference between a Watch verdict and a Pass verdict?
-A: Watch (5.5–6.9): real signals exist but 1–2 critical elements missing; re-evaluate in 6–9 months. Pass (<5.5): fundamental structural issues or a one-vote veto applies.
-
+A: Watch (5.5–6.9): real signals exist but 1–2 critical elements missing; re-evaluate in 6–9 months. Pass (<5.5): fundamental structural issues or a hard veto applies.
+Q: Can open source project owners use the framework on their own project?
+A: Yes. Owner Mode uses the same scoring but replaces the verdict with a diagnosis: the weakest dimension, three questions an investor will ask, three next actions, a project-context check, copy risk, and path fit. Reports go to the maintainer privately first and are published only with consent.
 ## Selected Evaluated Projects
-
 | Project | Score | Verdict |
 |---------|-------|---------|
 | vLLM / Inferact | 8.9/10 | Green — Anchor benchmark |
-| Hugging Face | 8.35/10 | Green — Anchor benchmark |
+| Hugging Face | 8.5/10 | Green — Anchor benchmark |
 | Unsloth | 8.10/10 | Yellow (Strong) — 57K stars, 150M+ downloads, YC S24 |
 | LMCache | 7.78/10 | Yellow — Infrastructure sleeper, NVIDIA Dynamo integration |
 | AReaL | 7.23/10 | Yellow |
 | AgentScope | 6.73/10 | Watch |
 | DeerFlow | 6.15/10 | Watch ⚠️Corp (ByteDance backing limits exit optionality) |
 | WFGY | 5.80/10 | Watch — PMF unproven |
-
 ## Contact
-
-- GitHub Issues: Submit your project for evaluation at https://github.com/lucy-cxy/oss-investment-scorecard/issues
+- Health check (project owners): https://github.com/lucy-cxy/oss-investment-scorecard/issues/new?template=health-check.md
+- GitHub Issues: https://github.com/lucy-cxy/oss-investment-scorecard/issues
 - Email: ossinvestor.2026@gmail.com
 - LinkedIn: https://linkedin.com/in/lucycxy
 - Fund: https://zoocap.com

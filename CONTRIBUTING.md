@@ -4,10 +4,21 @@ This framework is maintained by [Lucy Chen](https://linkedin.com/in/lucycxy) and
 
 ---
 
-## Three Types of Contributions
+## Four Ways to Take Part
+
+### Type 0 — Request a Health Check (project owners)
+Use the **[Health Check issue template](../../issues/new?template=health-check.md)**, or email ossinvestor.2026@gmail.com.
+How we handle your project:
+- The report goes to you privately first.
+- You can correct facts and respond to every point.
+- We publish only with your consent, with your response attached.
+- Nothing you share is passed to investors without your explicit consent.
+
+Requirements: you are a maintainer of the project, and the project has a public repository. The issue itself is public, so do not post confidential numbers in it; send them by email.
 
 ### Type 1 — Submit a Project Evaluation
 Use the **[Submit Evaluation issue template](../../issues/new?template=submit-evaluation.md)**.
+This template is for investors and analysts using Investor Mode.
 
 Requirements:
 - Project must have a public GitHub repository
@@ -21,7 +32,7 @@ A framework change is any modification to:
 - Dimension weights
 - Scoring thresholds (the 8.5 / 7.0 / 5.5 cutoffs)
 - Revenue quality hierarchy
-- One-Vote Veto conditions
+- Hard vetoes and risk flags
 - Technology layer definitions (L1–L4)
 
 Requirements — **all three must be met**:
@@ -61,6 +72,12 @@ Requirements:
 - **New case studies** from funded OSS companies in these niches: AI observability, vector databases, open-source model serving, data pipeline orchestration, AI-native security
 - **Revenue model evidence** — if you have non-public knowledge about how a funded OSS company actually makes money, and can share it publicly, this is high value
 - **Cross-regional signals** — how the framework performs on non-US-origin projects (EU, Israel, India, Korea)
+
+---
+
+## Conflicts of Interest
+- The maintainer of this framework discloses any commercial relationship with an evaluated project (investment, paid services, sponsorship or employment) next to that project's score.
+- Submitters disclose their own conflicts in their submission.
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 name: Propose Framework Change
-about: Suggest a modification to scoring weights, thresholds, revenue tiers, or veto conditions
+about: Suggest a modification to scoring weights, thresholds, revenue tiers, hard vetoes, or risk flags
 title: "[FRAMEWORK] Brief description of proposed change"
 labels: framework-change, needs-review
-assignees: lucycxy
+assignees: lucy-cxy
 ---
 
 ## What do you want to change?

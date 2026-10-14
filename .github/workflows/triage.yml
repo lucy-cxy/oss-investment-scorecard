@@ -24,6 +24,7 @@ jobs:
             if (title.startsWith('[EVAL]'))      labels.push('evaluation');
             if (title.startsWith('[FRAMEWORK]')) labels.push('framework-change');
             if (title.startsWith('[CASE]'))      labels.push('case-study');
+            if (title.startsWith('[HEALTH]'))    labels.push('health-check');
 
             if (labels.length > 0) {
               await github.rest.issues.addLabels({
@@ -47,7 +48,7 @@ jobs:
 
             **What happens next:**
             - Lucy will review within 14 days
-            - If the data sources check out, it'll be added to the [Evaluated Projects table](../blob/main/README.md#-evaluated-projects-community-submissions) in the README
+            - If the data sources check out, it'll be added to the [Evaluated Projects table](../blob/main/README.md#-evaluated-projects) in the README
             - If you checked the connection intent boxes, Lucy will reach out directly
 
             In the meantime, feel free to discuss this evaluation in the comments — other community members can weigh in.`
@@ -72,6 +73,23 @@ jobs:
             Lucy will review and respond. Community members are encouraged to comment with supporting or counter evidence before a decision is made.`
             });
 
+      - name: Post welcome comment on health check request
+        if: contains(github.event.issue.title, '[HEALTH]')
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: `Thanks for requesting a health check 🩺
+            **What happens next:**
+            - Lucy will reply within 14 days and prepare an Owner Mode report.
+            - The report goes to you privately first. Please email ossinvestor.2026@gmail.com with a link to this issue so we know where to send it.
+            - You can correct facts and respond. We publish only with your consent, with your response attached.
+            - This issue is public: please don't post confidential numbers here.`
+            });
+
   # ── Validate PR has required sections ──────────────────────────────
   validate-pr:
     if: github.event_name == 'pull_request'
@@ -90,7 +108,8 @@ jobs:
             });
 
             const validPaths = ['cases/', 'SKILL.md', 'README.md',
-                                'references/', 'template/', 'CONTRIBUTING.md'];
+                                'references/', 'template/', 'CONTRIBUTING.md',
+                                'CHANGELOG.md', 'llms.txt', '.github/'];
             const invalid = files
               .map(f => f.filename)
               .filter(f => !validPaths.some(p => f.startsWith(p)));

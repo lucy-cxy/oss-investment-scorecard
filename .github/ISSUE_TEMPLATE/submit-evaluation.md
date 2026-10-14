@@ -1,9 +1,9 @@
 ---
 name: Submit Project Evaluation
-about: Share a scored evaluation — connect with co-investors or get investor feedback on your project
+about: Investors and analysts — share a scored evaluation (Investor Mode). Project owners — please use the Health Check template instead.
 title: "[EVAL] Project Name — X.X/10 — Verdict"
 labels: evaluation, needs-review
-assignees: lucycxy
+assignees: lucy-cxy
 ---
 
 ## Project
@@ -43,9 +43,10 @@ assignees: lucycxy
 
 ---
 
-## One-Vote Veto Check
-
-Any triggered? ☐ Yes — specify: ___ ☐ No
+## Hard Veto & Risk Flag Check (v1.4)
+Hard veto triggered? ☐ Yes — which (V1–V4): ___ ☐ No
+Risk flags triggered (IDs, e.g. A1, B2): ___
+Framework version used: ☐ v1.4 ☐ Earlier: ___
 
 ---
 
@@ -72,11 +73,12 @@ List the public sources you used (GitHub metrics page, Crunchbase, press release
 **I want to:** *(check all that apply)*
 - ☐ Find co-investors — happy to be contacted by other investors interested in this space
 - ☐ Source introductions to this project's team — I'm actively deploying capital here
-- ☐ Get investor feedback on my own project *(founders only)*
 - ☐ Contribute to the public record only — no contact needed
+
+*Founders and maintainers: please use the Health Check template instead.*
 
 **Conflict of interest:** ☐ None ☐ Yes — disclose:
 
 **Contact** *(only shared with your permission)*:
 - LinkedIn:
-- Email: ossinvestor.2026@gmail.com
+- Email:

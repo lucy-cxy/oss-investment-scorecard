@@ -34,3 +34,10 @@ labels:
   - name: discussion
     color: "d876e3"
     description: Open for community discussion before decision
+
+  - name: health-check
+    color: "1d76db"
+    description: Project owner requested an Owner Mode health check
+  - name: v2.0
+    color: "5319e7"
+    description: Deferred to the v2.0 methodology iteration
