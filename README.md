@@ -114,6 +114,7 @@ v1.4 keeps four **hard vetoes**. In Investor Mode, any of them means Pass regard
 4. **Unresolved major litigation** or patent claims on the core technology
 
 Earlier drafts also vetoed single-maintainer projects, projects without a US market path, and projects with under 5% external contributors. v1.4 turns these into **risk flags**. Many successful commercial open source projects are written almost entirely by one company, a small team with coding agents can now ship what used to take a large one, and non-US routes can work. Risk flags are recorded and explained, but they never disqualify on their own.
+
 ---
 
 **Q: How does this framework handle projects where ARR or revenue isn't public?**
